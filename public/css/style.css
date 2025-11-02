@@ -12,6 +12,10 @@ body{
     height: 5rem;
     background-color: white;
 }
+
+
+
+
 .fa-compass{
     color: #fe424d;
     font-size: 2rem;
@@ -203,19 +207,6 @@ body{
     
 }
 
-#map {
-  width: 100%;
-  max-width: 600px; /* Optional: limit width on larger screens */
-  height: 250px; /* Thoda bada height mobile ke liye */
-  border-radius: 10px;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  #map {
-    height: 300px; /* Mobile screens ke liye thoda aur bada */
-  }
-}
 
 
 
