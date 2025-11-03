@@ -208,7 +208,20 @@ body{
 }
 
 
+#map {
+    border-radius: 10px;
+    margin: 0 auto;
+}
 
+@media (max-width: 768px) {
+  #map {
+    height: 300px; /* Mobile screens ke liye thoda aur bada */
+  }
+}
 
-
-
+@media (max-width: 768px) {
+#map {
+    height: 300px; /* Mobile screens ke liye thoda aur bada */
+    width: 400px; /* Full width on mobile */
+}
+}
