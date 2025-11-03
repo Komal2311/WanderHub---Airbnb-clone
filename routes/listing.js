@@ -30,11 +30,26 @@ router
     .route("/:id")
     .get(wrapAsync( listingController.showListing ))
     .put(
-    isLoggedIn,
-    isOwner,
-    upload.single('listing[image]'),
-    validateListing,
-    wrapAsync( listingController.updateListing))
+        isLoggedIn,
+        upload.single('listing[image]'),
+        validateListing,
+        async (req, res) => {
+            try {
+            await listingController.createListing(req, res);
+            } catch (err) {
+            console.log("❌ Error while creating listing:", err);
+            req.flash("error", "Something went wrong!");
+            res.redirect("/listings");
+            }
+        }
+        )
+
+    // .put(
+    // isLoggedIn,
+    // isOwner,
+    // upload.single('listing[image]'),
+    // validateListing,
+    // wrapAsync( listingController.updateListing))
     .delete(
     isLoggedIn,
     isOwner,
