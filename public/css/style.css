@@ -214,14 +214,8 @@ body{
 }
 
 @media (max-width: 768px) {
-  #map {
-    height: 300px; /* Mobile screens ke liye thoda aur bada */
-  }
-}
-
-@media (max-width: 768px) {
 #map {
-    height: 300px; /* Mobile screens ke liye thoda aur bada */
-    width: 400px; /* Full width on mobile */
+    height: 280px; /* Mobile screens ke liye thoda aur bada */
+    width: 280px; /* Full width on mobile */
 }
 }

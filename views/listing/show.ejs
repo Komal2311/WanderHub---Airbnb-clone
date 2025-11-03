@@ -66,23 +66,26 @@
             </form>
             <hr>
             <%}%>
-            <% if(listing.reviews.length > 0 ) { %>
-                <div class="row">
+            <% if (listing.reviews.length > 0) { %>
+                <div class="reviews-section mt-4">
                     <p><b>All Reviews</b></p>
-                    <% for(review of listing.reviews) {%>
-                        <div class="card col-5 ms-3 mb-3">
-                            <div class="card-body mt-3 ms-2">
-                                <h5 class="card-title">@<%=review.author.username %></h5>
-                                <p class="starability-result card-text" data-rating="<%= review.rating %>"></p>
-                                <p class="card-text"><%= review.comment %></p>
-                                <form action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE"  method="POST" class="mb-3">
-                                    <button class="btn btn-dark btn-sm">Delete</button>
-                                </form>
-                            </div>
+                    <div class="reviews-container">
+                    <% for (review of listing.reviews) { %>
+                        <div class="review-card">
+                        <h5>@<%= review.author.username %></h5>
+                        <p class="starability-result" data-rating="<%= review.rating %>"></p>
+                        <p><%= review.comment %></p>
+                        <form
+                            action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
+                            method="POST"
+                        >
+                            <button class="btn btn-dark btn-sm">Delete</button>
+                        </form>
                         </div>
-                    <%}%>
+                    <% } %>
+                    </div>
                 </div>
-            <% } %>
+                <% } %>
         </div>
         <div class="col-6 offset-3 mb-3">
             <h3>Where you'll be</h3>
