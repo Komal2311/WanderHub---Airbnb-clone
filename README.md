@@ -14,30 +14,30 @@ This project helped me understand the entire development lifecycle — from serv
 
 ✨ Key Features
 
-✅ User Authentication & Authorization – Secure login, signup, and logout using Passport.js, ensuring safe user sessions.
-✅ Listing Management (CRUD) – Users can add, edit, and delete their property listings easily.
-✅ Access Control – Only property owners can modify or delete their listings, while other users can only view them. 🔒
-✅ Photo Uploads with Cloudinary – All listing images are uploaded and stored safely using Cloudinary’s cloud storage.
-✅ Interactive Maps with Mapbox – Each listing is geocoded and displayed on an interactive map for better location visualization.
-✅ Review & Rating System – Users can write, delete, and view reviews for every property.
-✅ Functional Search Bar – The search feature dynamically shows listings related to the entered location name only.
-✅ Category-Based Filtering – Listings can be filtered by property types (e.g., cabins, beach houses, apartments, etc.).
-✅ Responsive Icons & Filter Bar – Added icons and filters that automatically adjust across different screen sizes.
-✅ Flash Messages & Validations – Proper feedback for user actions like login, error handling, and CRUD operations.
-✅ Responsive Design – Fully optimized layout for mobile, tablet, and desktop screens using Bootstrap and custom CSS.
-✅ Secure Sessions & Cookies – Session data stored securely with express-session and connect-mongo.
-✅ Deployed on Render – Hosted on a reliable, free cloud service ensuring smooth accessibility anytime, anywhere.
+- ✅ User Authentication & Authorization – Secure login, signup, and logout using Passport.js, ensuring safe user sessions.
+- ✅ Listing Management (CRUD) – Users can add, edit, and delete their property listings easily.
+- ✅ Access Control – Only property owners can modify or delete their listings, while other users can only view them. 🔒
+- ✅ Photo Uploads with Cloudinary – All listing images are uploaded and stored safely using Cloudinary’s cloud storage.
+- ✅ Interactive Maps with Mapbox – Each listing is geocoded and displayed on an interactive map for better location visualization.
+- ✅ Review & Rating System – Users can write, delete, and view reviews for every property.
+- ✅ Functional Search Bar – The search feature dynamically shows listings related to the entered location name only.
+- ✅ Category-Based Filtering – Listings can be filtered by property types (e.g., cabins, beach houses, apartments, etc.).
+- ✅ Responsive Icons & Filter Bar – Added icons and filters that automatically adjust across different screen sizes.
+- ✅ Flash Messages & Validations – Proper feedback for user actions like login, error handling, and CRUD operations.
+- ✅ Responsive Design – Fully optimized layout for mobile, tablet, and desktop screens using Bootstrap and custom CSS.
+- ✅ Secure Sessions & Cookies – Session data stored securely with express-session and connect-mongo.
+- ✅ Deployed on Render – Hosted on a reliable, free cloud service ensuring smooth accessibility anytime, anywhere.
 
 ⚙️ Tech Stack
 
-Frontend: HTML | CSS | JavaScript | Bootstrap | EJS Templates
-Backend: Node.js | Express.js
-Database: MongoDB Atlas
-Authentication: Passport.js
-Image Storage: Cloudinary
-Maps & Geocoding: Mapbox API
-Deployment: Render
-Version Control: Git & GitHub
+- Frontend: HTML | CSS | JavaScript | Bootstrap | EJS Templates
+- Backend: Node.js | Express.js
+- Database: MongoDB Atlas
+- Authentication: Passport.js
+- Image Storage: Cloudinary
+- Maps & Geocoding: Mapbox API
+- Deployment: Render
+- Version Control: Git & GitHub
 
 🧩 Additional Highlights
 
