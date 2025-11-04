@@ -37,6 +37,7 @@ async function main() {
 app.set("view engine","ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, "public")));
@@ -101,14 +102,32 @@ app.use("/", userRouter);
 
 
 //handle error
-app.all(/.*/,(req,res,next)=>{
-next(new ExpressError(405,"PAGE NOT FOUND!!!"));
-})
-app.use((err,req,res,next)=>{
-    let{statusCode=500 , message="Something went wrong!!"} = err;
-    res.status(statusCode).render("error.ejs",{message});
-    // res.status(statusCode).send(message);
-})
+// app.all(/.*/,(req,res,next)=>{
+// next(new ExpressError(405,"PAGE NOT FOUND!!!"));
+// })
+// app.use((err,req,res,next)=>{
+//     let{statusCode=500 , message="Something went wrong!!"} = err;
+//     res.status(statusCode).render("error.ejs",{message});
+//     // res.status(statusCode).send(message);
+// })
+
+app.use((err, req, res, next) => {
+    const { statusCode = 500 } = err;
+    console.error("🔥 ERROR DETAILS:", err); // full error printed in terminal
+
+    // For user/browser — show real message if available
+    const message = err.message || "Something went wrong!!";
+
+    // If you want to show error stack trace also in development:
+    if (process.env.NODE_ENV !== "production") {
+        res.status(statusCode).render("error.ejs", { 
+            message: `${message}\n\nStack: ${err.stack}`
+        });
+    } else {
+        res.status(statusCode).render("error.ejs", { message });
+    }
+});
+
 
 app.listen(port,()=>{
     console.log
